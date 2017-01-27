@@ -72,7 +72,7 @@ class Client
     return hash_hmac('sha256', $this->getDecodedPayload(), $this->getSecret());
   }
 
-  protected function getResponseUrl(array $userParams)
+  public function getResponseUrl(array $userParams)
   {
     return $this->getCallbackUrl() . '?' . $this->getResponseQuery($userParams);
   }
